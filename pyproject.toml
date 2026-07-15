@@ -1,0 +1,59 @@
+[project]
+name = "biomec-project"
+version = "0.1.0"
+description = "Aplicativo de Análise Biomecânica"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anytree>=2.13.0",
+    "basictdf",
+    "numpy",
+    "pandas",
+    "pyomeca>=2024.0.2",
+    "PyQt6",
+    "pyqtgraph",
+    "scipy",
+    "openpyxl",
+    "pytest-cov",
+    "genbadge[all]"
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+]
+
+
+[tool.pyright]
+extraPaths = [".", "src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = [
+    "src/arquivos",
+    "src/controller",
+    "src/processamento",
+]
+
+[tool.coverage.report]
+omit = [
+    "src/ui/*",
+    "src/main.py",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+extend-exclude = "src/libs/"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+extend-exclude = ["src/libs/"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]

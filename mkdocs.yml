@@ -1,0 +1,51 @@
+site_name: Biomec SAS
+site_description: Software de Análise de Sinais Biomecânicos
+site_url: https://GrupoBiomec.github.io/Biomec-SAS/
+
+theme:
+  name: material
+  language: pt
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Início: index.md
+  - Funcionalidades: funcionalidades.md
+  - Guia do Usuário: guia_usuario.md
+  - Execução e Testes: guia_execucao.md
+  - Arquitetura: estrutura_codigo.md
+  - Autoria: AUTHORS.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
