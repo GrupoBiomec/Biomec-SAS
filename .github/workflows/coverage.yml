@@ -22,10 +22,10 @@ jobs:
       with:
         python-version: '3.12'
 
-    - name: Instalar dependências do sistema para PyQt6 headles
+    - name: Instalar dependências do sistema para PyQt6 headless e display virtual
       run: |
         sudo apt-get update
-        sudo apt-get install -y libegl1 libgl1-mesa-glx libxkbcommon-x11-0 libdbus-1-3 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-xfixes0 libxcb-xinerama0 libxcb-xinput0
+        sudo apt-get install -y xvfb libegl1 libgl1 libglx-mesa0 libxkbcommon-x11-0 libdbus-1-3 libxcb-cursor0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-xfixes0 libxcb-xinerama0 libxcb-xinput0
 
     - name: Instalar dependências do Python
       run: |
@@ -35,10 +35,9 @@ jobs:
 
     - name: Executar testes e gerar cobertura
       env:
-        QT_QPA_PLATFORM: offscreen
         PYTHONPATH: src
       run: |
-        pytest --cov=src --cov-report=xml tests/
+        xvfb-run pytest --cov=src --cov-report=xml tests/
 
     - name: Gerar badge de cobertura
       run: |
