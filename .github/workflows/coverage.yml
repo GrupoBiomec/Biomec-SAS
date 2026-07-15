@@ -45,9 +45,14 @@ jobs:
         genbadge coverage -i coverage.xml -o badges/coverage.svg
 
     - name: Commit e push do badge de cobertura
+      if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add badges/coverage.svg
-        git commit -m "chore: update coverage badge [skip ci]" || echo "Nenhuma alteração para commitar"
-        git push
+        if git commit -m "chore: update coverage badge [skip ci]"; then
+          git pull origin ${GITHUB_REF_NAME} --rebase -X theirs
+          git push origin ${GITHUB_REF_NAME}
+        else
+          echo "Nenhuma alteração para commitar"
+        fi

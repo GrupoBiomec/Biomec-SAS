@@ -32,17 +32,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Executar testes com cobertura
-      run: xvfb-run pytest --cov --cov-report=xml --cov-report=term
+    - name: Executar testes
+      run: xvfb-run pytest
 
-    - name: Gerar badge de cobertura
-      run: genbadge coverage -i coverage.xml -o badges/coverage.svg
-
-    - name: Commit do badge atualizado
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add badges/coverage.svg
-        git diff --cached --quiet || git commit -m "ci: atualizar badge de cobertura [skip ci]"
-        git push
