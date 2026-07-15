@@ -17,7 +17,6 @@ Baixe a versão mais recente do executável para Windows (`.exe`) na página de 
 
 > Não é necessário instalar Python nem dependências, basta baixar e executar.
 
----
 
 ## Funcionalidades Principais
 
@@ -28,7 +27,6 @@ Baixe a versão mais recente do executável para Windows (`.exe`) na página de 
 - Automação de ações por meio de scripts configurados pelo usuário.
 - Salvamento de projetos e exportação de resultados.
 
----
 
 ## Documentação 
 
@@ -51,4 +49,4 @@ Orientação e supervisão científica: **Prof. Dr. Jefferson Fagundes Loss**
 
 **Laboratório de Pesquisa em Biomecânica — UFRGS** · 2025–2026
 
-Consulte [`AUTHORS.md`](AUTHORS.md) para a lista completa de contribuidores e dependências de terceiros.
+Consulte [`AUTHORS.md`](docs/AUTHORS.md) para a lista completa de contribuidores e dependências de terceiros.
