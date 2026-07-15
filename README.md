@@ -43,7 +43,7 @@ Consulte o arquivo [`LICENSE.txt`](LICENSE.txt) para mais detalhes.
 
 ## Autoria
 
-Desenvolvido por **Izadora Candotti de Oliveira** · [GitHub](https://github.com/GrupoBiomec)
+Desenvolvido por **Izadora Candotti de Oliveira** · [GitHub](https://github.com/izacandotti)
 
 Orientação e supervisão científica: **Prof. Dr. Jefferson Fagundes Loss**
 
