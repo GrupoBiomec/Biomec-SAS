@@ -1,0 +1,1260 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Software de Análise de Sinais Biomecânicos">
+      
+      
+      
+        <link rel="canonical" href="https://GrupoBiomec.github.io/Biomec-SAS/guia_usuario/">
+      
+      
+        <link rel="prev" href="../funcionalidades/">
+      
+      
+        <link rel="next" href="../guia_execucao/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Guia do Usuário - Biomec SAS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-do-usuario-biomec-sas" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Biomec SAS" class="md-header__button md-logo" aria-label="Biomec SAS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Biomec SAS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guia do Usuário
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../funcionalidades/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Funcionalidades
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guia do Usuário
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guia_execucao/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Execução e Testes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../estrutura_codigo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Arquitetura
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../AUTHORS/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Autoria
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Biomec SAS" class="md-nav__button md-logo" aria-label="Biomec SAS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Biomec SAS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funcionalidades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funcionalidades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Usuário
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia do Usuário
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-formatos-de-arquivo-suportados-e-importacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Formatos de Arquivo Suportados e Importação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Formatos de Arquivo Suportados e Importação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-importar-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Importar Arquivos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visualizacao-e-criacao-de-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Visualização e Criação de Gráficos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Visualização e Criação de Gráficos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-criar-um-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Criar um Gráfico:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-de-visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos de Visualização:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tratamento-de-sinais-e-limpeza-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tratamento de Sinais e Limpeza de Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tratamento de Sinais e Limpeza de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-preenchimento-de-lacunas-interpolacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Preenchimento de Lacunas (Interpolação)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-filtragem-digital-de-sinais-filtro-butterworth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Filtragem Digital de Sinais (Filtro Butterworth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-recorte-temporal-trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Recorte Temporal (Trim)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-definicao-de-offset-deslocamento-de-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Definição de Offset (Deslocamento de Nível)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-informacoes-e-analise-estatistica-da-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Informações e Análise Estatística da Curva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Informações e Análise Estatística da Curva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-acessar-as-informacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Acessar as Informações:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-computadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Computadas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-operacoes-matematicas-entre-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Operações Matemáticas entre Variáveis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-automatizacao-por-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Automatização por Scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Automatização por Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencas-entre-tipos-de-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferenças entre Tipos de Scripts:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-criar-e-executar-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Criar e Executar Scripts:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exportacao-de-resultados-e-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Exportação de Resultados e Projetos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guia_execucao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Execução e Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrutura_codigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AUTHORS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autoria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-formatos-de-arquivo-suportados-e-importacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Formatos de Arquivo Suportados e Importação
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Formatos de Arquivo Suportados e Importação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-importar-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Importar Arquivos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visualizacao-e-criacao-de-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Visualização e Criação de Gráficos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Visualização e Criação de Gráficos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-criar-um-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Criar um Gráfico:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-de-visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recursos de Visualização:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tratamento-de-sinais-e-limpeza-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Tratamento de Sinais e Limpeza de Dados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Tratamento de Sinais e Limpeza de Dados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-preenchimento-de-lacunas-interpolacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Preenchimento de Lacunas (Interpolação)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-filtragem-digital-de-sinais-filtro-butterworth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Filtragem Digital de Sinais (Filtro Butterworth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-recorte-temporal-trim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Recorte Temporal (Trim)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-definicao-de-offset-deslocamento-de-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Definição de Offset (Deslocamento de Nível)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-informacoes-e-analise-estatistica-da-curva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Informações e Análise Estatística da Curva
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Informações e Análise Estatística da Curva">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-acessar-as-informacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Acessar as Informações:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-computadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Computadas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-operacoes-matematicas-entre-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Operações Matemáticas entre Variáveis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-automatizacao-por-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Automatização por Scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Automatização por Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diferencas-entre-tipos-de-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferenças entre Tipos de Scripts:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-criar-e-executar-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como Criar e Executar Scripts:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-exportacao-de-resultados-e-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Exportação de Resultados e Projetos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-do-usuario-biomec-sas">Guia do Usuário — Biomec SAS</h1>
+<p>Este manual descreve os principais procedimentos operacionais para a condução de análises de sinais biomecânicos utilizando o  <strong>Biomec SAS</strong>. </p>
+<hr />
+<h2 id="1-formatos-de-arquivo-suportados-e-importacao">1. Formatos de Arquivo Suportados e Importação</h2>
+<p>O Biomec SAS suporta a importação de dois formatos principais de arquivos de dados:</p>
+<ul>
+<li><strong>Arquivos <code>.EMT</code>:</strong> Arquivos de texto tabelado contendo dados cinemáticos ou eletromiográficos. O software realiza o parsing automático de delimitadores, colunas e metadados.</li>
+<li><strong>Arquivos <code>.TDF</code>:</strong> Formato binário proprietário da <em>BTS Bioengineering</em>. A plataforma realiza a leitura da estrutura interna do arquivo, extraindo automaticamente as informações do cabeçalho, canais analógicos e tridimensionais, frequências de amostragem e unidades originais de coleta.</li>
+</ul>
+<h3 id="como-importar-arquivos">Como Importar Arquivos:</h3>
+<ol>
+<li>Acesse o menu superior: <code>Arquivo</code> &rarr; <code>Abrir Arquivo</code>.</li>
+<li>Selecione a opção correspondente ao formato do arquivo desejado (<code>Arquivo EMT</code> ou <code>Arquivo TDF</code>).</li>
+<li>Na janela de seleção do sistema, navegue até o diretório correspondente, selecione os arquivos (é permitido selecionar múltiplos arquivos simultaneamente) e clique em <code>Abrir</code>.</li>
+<li>Os arquivos carregados serão listados na seção superior da árvore lateral esquerda (<strong>"Arquivos carregados"</strong>).</li>
+</ol>
+<hr />
+<h2 id="2-visualizacao-e-criacao-de-graficos">2. Visualização e Criação de Gráficos</h2>
+<p>Uma vez importados, os sinais ficam disponíveis para exploração gráfica bidimensional.</p>
+<h3 id="como-criar-um-grafico">Como Criar um Gráfico:</h3>
+<ol>
+<li>Na árvore lateral esquerda, clique com o <strong>botão direito do mouse</strong> sobre o nome do arquivo importado.</li>
+<li>Selecione a opção <strong>"Adicionar novo gráfico"</strong>.</li>
+<li>Na janela de configuração que se abre:<ul>
+<li><strong>Tipo de Gráfico:</strong> Selecione entre <code>Linha</code> (para traçados contínuos) ou <code>Dispersão</code> (para nuvens de pontos).</li>
+<li><strong>Eixo X:</strong> Defina a variável de referência temporal ou espacial (normalmente <code>tempo</code> ou <code>frame</code>).</li>
+<li><strong>Eixo Y:</strong> Selecione a variável dependente a ser analisada.</li>
+<li><strong>Título e Unidades:</strong> O software sugere automaticamente as unidades baseadas no arquivo original, mas permite a customização de títulos e legendas.</li>
+</ul>
+</li>
+<li>Clique em <code>Confirmar</code>. O gráfico criado será aninhado abaixo do respectivo arquivo na árvore lateral.</li>
+<li>Clique sobre o gráfico criado na árvore lateral para exibi-lo na área de visualização central.</li>
+</ol>
+<blockquote>
+<p><strong>Múltiplas Curvas:</strong> Para criar gráficos de diversas variáveis Y em lote compartilhando o mesmo eixo X, clique com o botão direito sobre o arquivo e selecione <strong>"Visualizar múltiplas curvas"</strong>. Uma composição será criada automaticamente na seção inferior esquerda.</p>
+</blockquote>
+<h3 id="recursos-de-visualizacao">Recursos de Visualização:</h3>
+<ul>
+<li><strong>Zoom:</strong> Clique com o botão direito sobre o gráfico ou a composição na árvore lateral correspondente e selecione <strong>"Ativar Zoom"</strong>. Com o zoom ativo, selecione a área do gráfico que deseja ampliar. Para restabelecer a escala original, clique no botão <strong>"Desativar Zoom"</strong> exibido no topo direito do grafico.</li>
+<li><strong>Ajustes Visuais:</strong> Clique com o botão direito sobre o gráfico na árvore lateral e selecione <strong>"Editar Gráfico"</strong> para alterar título, cor da curva ou nomes dos eixos.</li>
+</ul>
+<hr />
+<h2 id="3-tratamento-de-sinais-e-limpeza-de-dados">3. Tratamento de Sinais e Limpeza de Dados</h2>
+<h3 id="31-preenchimento-de-lacunas-interpolacao">3.1. Preenchimento de Lacunas (Interpolação)</h3>
+<p>Durante aquisições cinemáticas, podem haver momentos de perdas de sinal (valores <code>NaN</code>). O módulo de interpolação reconstrói estes intervalos de forma matemática.</p>
+<ul>
+<li><strong>Como Acessar:</strong> Menu superior <code>Processamento</code> &rarr; <code>Métodos de Interpolação</code>.</li>
+<li><strong>Operação:</strong> Selecione as variáveis que deseja interpolar e escolha o algoritmo de preenchimento: linear, spline ou média.
+   O modo "preview" permite que o usuário visualize o resultado da aplicação do método antes de salvar os dados, além de permitir que ele adicione um ponto manualmente (funcionalidade chamada de "wywiwyg", que significa "what you want is what you get").</li>
+</ul>
+<h3 id="32-filtragem-digital-de-sinais-filtro-butterworth">3.2. Filtragem Digital de Sinais (Filtro Butterworth)</h3>
+<p>Filtros digitais recursivos do tipo Butterworth são implementados sem atraso de fase.</p>
+<ul>
+<li><strong>Como Acessar:</strong> Menu superior <code>Processamento</code> &rarr; <code>Filtrar sinal</code> &rarr; <code>Passa-Baixa</code> ou <code>Passa-Alta</code>.</li>
+<li><strong>Janela de Visualização Interativa:</strong> A janela de filtragem exibe simultaneamente o sinal original (cinza) e o resultado filtrado (azul) em tempo real conforme os parâmetros são alterados.</li>
+<li><strong>Parâmetros Configuráveis:</strong><ul>
+<li><strong>Frequência de Corte (f_c):</strong> Limite de atenuação do sinal (em Hz).</li>
+<li><strong>Ordem do Filtro:</strong> Define a declividade da banda de transição.</li>
+<li><strong>Retificação:</strong> Disponível em filtros passa-baixa, permite calcular o valor absoluto do sinal (|y|) antes da filtragem, essencial para a obtenção do envelope linear de sinais de Eletromiografia (EMG).</li>
+<li><strong>Algoritmo de Winter:</strong> Exclusivo para filtros passa-baixa, executa uma rotina de análise residual para estimar de forma ótima a frequência de corte do ruído de alta frequência.</li>
+</ul>
+</li>
+</ul>
+<h3 id="33-recorte-temporal-trim">3.3. Recorte Temporal (Trim)</h3>
+<p>Permite a limitação da janela temporal de análise.</p>
+<ul>
+<li><strong>Como Acessar:</strong> Menu superior <code>Processamento</code> &rarr; <code>Recorte Temporal</code>.</li>
+<li><strong>Operação:</strong> O usuário visualiza os sinais agrupados por categorias físicas (cinemática, força, EMG) e ajusta barras deslizantes verticais (verde para início, vermelha para fim) para definir a nova janela de análise. O recorte afeta de forma síncrona todas as variáveis do arquivo selecionado para garantir a integridade temporal do ensaio.</li>
+<li><strong>Translação Temporal:</strong> O software oferece a opção de transladar o eixo de tempo para iniciar exatamente em zero no novo ponto de corte.</li>
+</ul>
+<h3 id="34-definicao-de-offset-deslocamento-de-nivel">3.4. Definição de Offset (Deslocamento de Nível)</h3>
+<ul>
+<li><strong>Como Acessar:</strong> Menu superior <code>Processamento</code> &rarr; <code>Definir Offset</code>.</li>
+<li><strong>Operação:</strong> Permite selecionar múltiplas colunas e indicar o valor numérico a ser subtraído de cada ponto. É recomendado não selecionar muitas colunas de uma vez, para não poluir a preview.
+ É possível escolher entre sobrescrever os dados originais no arquivo ativo ou salvar os resultados como novas variáveis independentes.</li>
+</ul>
+<hr />
+<h2 id="4-informacoes-e-analise-estatistica-da-curva">4. Informações e Análise Estatística da Curva</h2>
+<p>Estatísticas descritivas são calculadas de forma dinâmica para qualquer gráfico selecionado.</p>
+<h3 id="como-acessar-as-informacoes">Como Acessar as Informações:</h3>
+<ol>
+<li>Na árvore lateral esquerda, expanda o arquivo correspondente.</li>
+<li>Clique com o <strong>botão direito do mouse</strong> sobre o gráfico desejado e selecione <strong>"Informações da Curva"</strong>.</li>
+</ol>
+<h3 id="metricas-computadas">Métricas Computadas:</h3>
+<ul>
+<li><strong>Valores Extremos:</strong> Valores máximos e mínimos dos eixos X e Y, além de picos máximos e mínimos globais.</li>
+<li><strong>Métricas Descritivas de Y:</strong> Root Mean Square (RMS) e amplitude pico a pico.</li>
+<li><strong>Pontos de Amostragem:</strong> Frequência de amostragem estimada (Hz) e quantidade total de pontos válidos (excluindo-se lacunas).</li>
+</ul>
+<hr />
+<h2 id="5-operacoes-matematicas-entre-variaveis">5. Operações Matemáticas entre Variáveis</h2>
+<p>O menu superior <code>Operações</code> permite derivar novos canais de dados a partir de relações matemáticas:</p>
+<ul>
+<li><strong>Aritmética Básica (<code>Operações</code> &rarr; <code>Aritmética Básica</code>):</strong> Efetua operações algébricas (+, -, \times, \div) entre duas colunas de dados ou entre uma coluna e uma constante numérica.</li>
+<li><strong>Trigonometria (<code>Operações</code> &rarr; <code>Trigonometria</code>):</strong> Calcula funções trigonométricas (seno, cosseno, tangente) de variáveis angulares. O software detecta a unidade de entrada (graus ou radianos) para a correta aplicação das relações.</li>
+<li><strong>Cálculo e Funções Escalares (<code>Operações</code> &rarr; <code>Cálculo e Funções Escalares</code>):</strong><ul>
+<li><em>Derivadas:</em> Primeira e segunda derivadas temporais (velocidade e aceleração) calculadas via diferenças finitas centrais.</li>
+<li><em>Integral:</em> Área sob a curva calculada pelo método trapezoidal cumulativo.</li>
+<li><em>Escalares:</em> Módulo (|y|), inverso (1/y) e raiz quadrada (\sqrt{y}).</li>
+</ul>
+</li>
+<li><strong>Definir Ângulos (<code>Operações</code> &rarr; <code>Definir Ângulos</code>):</strong> Permite calcular ângulos articulares ou de inclinação espacial a partir de coordenadas espaciais 3D (marcadores cinemáticos).</li>
+</ul>
+<hr />
+<h2 id="6-automatizacao-por-scripts">6. Automatização por Scripts</h2>
+<p>Os scripts otimizam fluxos de processamento repetitivos sobre múltiplos conjuntos de dados, automatizando essas ações. </p>
+<h3 id="diferencas-entre-tipos-de-scripts">Diferenças entre Tipos de Scripts:</h3>
+<ul>
+<li><strong>Scripts de Arquivo:</strong> Operam sobre a estrutura bruta do DataFrame. Servem para criar gráficos em lote, recortar trechos temporais e gerar novas variáveis calculadas de forma automatizada no arquivo selecionado.</li>
+<li><strong>Scripts de Gráfico:</strong> Otimizam a etapa de tratamento dos dados. Servem para aplicar configurações pre-estabelecidas de filtros, interpolações, offsets e polinômios de referência em um gráfico.</li>
+</ul>
+<h3 id="como-criar-e-executar-scripts">Como Criar e Executar Scripts:</h3>
+<ol>
+<li>Acesse o menu superior <code>Scripts</code> &rarr; <code>Criar Novo Script de Arquivo</code> ou <code>Criar Novo Script de Gráfico</code>.</li>
+<li>Configure a sequência de etapas na interface de criação e salve o roteiro.</li>
+<li>Para aplicar, clique com o botão direito sobre o arquivo ou gráfico na árvore lateral, clique em <code>Aplicar Script</code> e selecione o roteiro correspondente.</li>
+</ol>
+<hr />
+<h2 id="7-exportacao-de-resultados-e-projetos">7. Exportação de Resultados e Projetos</h2>
+<p>O menu superior <code>Exportar</code> possui as seguintes opções:</p>
+<ul>
+<li><strong>Salvar Projeto (<code>.sas</code>):</strong> Salva o estado completo da análise (arquivos importados, configurações de plotagem, composições visuais e histórico do pipeline) em um arquivo compactado <code>.sas</code>. Para retomar o trabalho, acesse <code>Arquivo</code> &rarr; <code>Abrir Projeto (.sas)</code>.</li>
+<li><strong>Exportar Histórico de Processamento (<code>.txt</code>):</strong> Gera um relatório contendo todas as operações realizadas (pipeline de processamento).</li>
+<li><strong>Exportar Gráficos e Relatórios:</strong> Acessível em <code>Exportar</code> &rarr; <code>Exportar Gráficos</code>. Permite selecionar múltiplos gráficos na lista e exportá-los em três formatos:<ul>
+<li><em>PDF:</em> Documento contendo as imagens vetorizadas dos gráficos selecionados.</li>
+<li><em>TXT:</em> Arquivo com as estatísticas descritivas/ informações das curvas associadas.</li>
+<li><em>ZIP:</em> Arquivo compactado contendo o documento em PDF e o relatório estatístico correspondente.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
