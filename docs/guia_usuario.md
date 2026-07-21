@@ -58,9 +58,9 @@ Filtros digitais recursivos do tipo Butterworth são implementados sem atraso de
 *   **Como Acessar:** Menu superior `Processamento` &rarr; `Filtrar sinal` &rarr; `Passa-Baixa` ou `Passa-Alta`.
 *   **Janela de Visualização Interativa:** A janela de filtragem exibe simultaneamente o sinal original (cinza) e o resultado filtrado (azul) em tempo real conforme os parâmetros são alterados.
 *   **Parâmetros Configuráveis:**
-    *   **Frequência de Corte ($f_c$):** Limite de atenuação do sinal (em Hz).
+    *   **Frequência de Corte (f_c):** Limite de atenuação do sinal (em Hz).
     *   **Ordem do Filtro:** Define a declividade da banda de transição.
-    *   **Retificação:** Disponível em filtros passa-baixa, permite calcular o valor absoluto do sinal ($|y|$) antes da filtragem, essencial para a obtenção do envelope linear de sinais de Eletromiografia (EMG).
+    *   **Retificação:** Disponível em filtros passa-baixa, permite calcular o valor absoluto do sinal (|y|) antes da filtragem, essencial para a obtenção do envelope linear de sinais de Eletromiografia (EMG).
     *   **Algoritmo de Winter:** Exclusivo para filtros passa-baixa, executa uma rotina de análise residual para estimar de forma ótima a frequência de corte do ruído de alta frequência.
 
 ### 3.3. Recorte Temporal (Trim)
@@ -98,12 +98,12 @@ Estatísticas descritivas são calculadas de forma dinâmica para qualquer gráf
 
 O menu superior `Operações` permite derivar novos canais de dados a partir de relações matemáticas:
 
-*   **Aritmética Básica (`Operações` &rarr; `Aritmética Básica`):** Efetua operações algébricas ($+, -, \times, \div$) entre duas colunas de dados ou entre uma coluna e uma constante numérica.
-*   **Trigonometria (`Operações` &rarr; `Trigonometria`):** Calcula funções trigonométricas ($seno$, $cosseno$, $tangente$) de variáveis angulares. O software detecta a unidade de entrada (graus ou radianos) para a correta aplicação das relações.
+*   **Aritmética Básica (`Operações` &rarr; `Aritmética Básica`):** Efetua operações algébricas (+, -, \times, \div) entre duas colunas de dados ou entre uma coluna e uma constante numérica.
+*   **Trigonometria (`Operações` &rarr; `Trigonometria`):** Calcula funções trigonométricas (seno, cosseno, tangente) de variáveis angulares. O software detecta a unidade de entrada (graus ou radianos) para a correta aplicação das relações.
 *   **Cálculo e Funções Escalares (`Operações` &rarr; `Cálculo e Funções Escalares`):**
     *   *Derivadas:* Primeira e segunda derivadas temporais (velocidade e aceleração) calculadas via diferenças finitas centrais.
     *   *Integral:* Área sob a curva calculada pelo método trapezoidal cumulativo.
-    *   *Escalares:* Módulo ($|y|$), inverso ($1/y$) e raiz quadrada ($\sqrt{y}$).
+    *   *Escalares:* Módulo (|y|), inverso (1/y) e raiz quadrada (\sqrt{y}).
 *   **Definir Ângulos (`Operações` &rarr; `Definir Ângulos`):** Permite calcular ângulos articulares ou de inclinação espacial a partir de coordenadas espaciais 3D (marcadores cinemáticos).
 
 ---
